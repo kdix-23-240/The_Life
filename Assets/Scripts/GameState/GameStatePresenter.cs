@@ -22,6 +22,7 @@ public class GameStatePresenter : MonoBehaviour
     {
         _model.GameState.Subscribe(state =>
         {
+            Debug.Log("GameState: " + _model.GetGameState());
             switch (state)
             {
                 case GameStateModel.GameStateEnum.Start:

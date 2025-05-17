@@ -21,6 +21,8 @@ public class Timer : MonoBehaviour
 
         if (_time >= _timeLimit)
         {
+            Debug.Log("Time's up!");
+            _time = 0f;
             GameStateModel.Instance.SetGameState(GameStateModel.GameStateEnum.GameOver);
         }
     }

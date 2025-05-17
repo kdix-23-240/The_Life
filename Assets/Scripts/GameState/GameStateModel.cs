@@ -40,4 +40,8 @@ public class GameStateModel
     {
         _gameState.Value = state;
     }
+    public GameStateEnum GetGameState()
+    {
+        return _gameState.Value;
+    }
 }
