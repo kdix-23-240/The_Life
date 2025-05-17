@@ -16,7 +16,6 @@ public class KeyController : MonoBehaviour, IController
     void Start()
     {
         _stageModel = GetComponent<StagePresenter>().GetStageModel();
-        Debug.Log("stageModel:" + _stageModel);
         Bind();
     }
     void Update()
@@ -57,7 +56,6 @@ public class KeyController : MonoBehaviour, IController
         {
             if (isPressed)
             {
-                Debug.Log("Aボタンが押された");
                 _stageModel.MoveLeft();
             }
         }).AddTo(this);
@@ -67,7 +65,6 @@ public class KeyController : MonoBehaviour, IController
         {
             if (isPressed)
             {
-               Debug.Log("Dボタンが押された");
                 _stageModel.MoveRight();
             }
         }).AddTo(this);

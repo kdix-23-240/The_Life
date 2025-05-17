@@ -4,13 +4,14 @@ using Cysharp.Threading.Tasks;
 /// <summary>
 /// ボールを生成するクラス
 /// </summary>
-public class BallCreator : MonoBehaviour
+public class BallCreator : PoolManager<BallPool>
 {
     [SerializeField] private GameObject[] _balls;
     [SerializeField] private float _createDelayTime = 5f;// 生成間隔(秒)
 
     async UniTask Start()
     {
+        Initialize();
         while (true)
         {
             Create();
@@ -23,6 +24,6 @@ public class BallCreator : MonoBehaviour
     /// </summary>
     private void Create()
     {
-        Instantiate(_balls[Random.Range(0, _balls.Length)], this.gameObject.transform);
+        Instantiate(_balls[Random.Range(0, _balls.Length)], transform.position, Quaternion.identity, transform);
     }
 }

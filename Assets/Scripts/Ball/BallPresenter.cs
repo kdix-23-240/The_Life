@@ -33,12 +33,10 @@ public class BallPresenter : MonoBehaviour
     {
         _model.BallPosX.Subscribe(x =>
         {
-            Debug.Log("バインドx:" + x);
             _view.MoveX(x);
         }).AddTo(this);
         _model.BallPosY.Subscribe(y =>
         {
-            Debug.Log("バインドy:" + y);
             _view.MoveY(y);
         }).AddTo(this);
     }
