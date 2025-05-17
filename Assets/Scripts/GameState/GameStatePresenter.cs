@@ -31,11 +31,6 @@ public class GameStatePresenter : MonoBehaviour
                 case GameStateModel.GameStateEnum.Playing:
                     _startView.Hide();
                     _resultView.Hide();
-                    // ゲームプレイ時間を計測開始
-                    _timer = 0f;
-                    Observable.EveryUpdate()
-                        .Subscribe(_ => _timer += Time.deltaTime)
-                        .AddTo(this);
                     break;
                 case GameStateModel.GameStateEnum.GameOver:
                     _startView.Hide();
