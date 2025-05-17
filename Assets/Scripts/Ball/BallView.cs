@@ -2,12 +2,11 @@ using UnityEngine;
 
 public class BallView : MonoBehaviour
 {
-    [SerializeField] private float _reflectPlusRate = 1.05f; // 反射率
-    [SerializeField] private float _reflectMinusRate = 0.5f; // 反射率
+    [SerializeField] private float _reflectPlusRate = 1.05f; // 反射増加率
+    [SerializeField] private float _reflectMinusRate = 0.5f; // 反射減少率
     private Rigidbody2D _rigidbody;
     public void Initialize()
     {
-        Debug.Log("Initializing BallView...");
         _rigidbody = GetComponent<Rigidbody2D>();
     }
     public void MoveX(float x)
@@ -22,9 +21,13 @@ public class BallView : MonoBehaviour
         newPosition.y = y;
         this.transform.position = newPosition;
     }
+    /// <summary>
+    /// 雑に書きすぎているので、後で修正する
+    /// コリジョンインターフェース的なものを作って別のクラスに処理を書く
+    /// </summary>
+    /// <param name="other"></param>
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("tag:" + other.tag);
         if (other.CompareTag("CenterStage"))
         {
             // y軸方向の速度を0にする
@@ -36,7 +39,6 @@ public class BallView : MonoBehaviour
             Vector2 force = new Vector2(0, 50f); // 上方向の力
             _rigidbody.AddForce(force, ForceMode2D.Impulse);
         }
-        
 
         if (other.CompareTag("Stage"))
         {
@@ -64,7 +66,7 @@ public class BallView : MonoBehaviour
             Vector2 reflection = Vector2.Reflect(incoming * _reflectMinusRate, normal); // 反射ベクトル
             _rigidbody.linearVelocity = reflection; // Ballの速度を反射ベクトルに設定
         }
-        
+
         if (other.CompareTag("FrameHorizon"))
         {
             // FrameHorizontalの角度とBallの角度から反射ベクトルを計算

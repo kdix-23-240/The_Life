@@ -1,5 +1,8 @@
 using UniRx;
 
+/// <summary>
+/// ボールの座標を管理するモデルクラス
+/// </summary>
 public class BallModel
 {
     private readonly ReactiveProperty<float> _ballPosX;
