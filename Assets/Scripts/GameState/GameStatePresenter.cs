@@ -4,14 +4,12 @@ using UniRx;
 public class GameStatePresenter : MonoBehaviour
 {
     private GameStateModel _model;
-    private GameStartStateView _startView;
-    private GameResultView _resultView;
+    [SerializeField] private GameStartStateView _startView;
+    [SerializeField] private GameResultView _resultView;
 
     void Awake()
     {
         _model = GameStateModel.Instance;
-        _startView = this.gameObject.GetComponent<GameStartStateView>();
-        _resultView = this.gameObject.GetComponent<GameResultView>();
     }
     void Start()
     {

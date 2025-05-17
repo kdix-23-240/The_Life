@@ -3,7 +3,6 @@ using UnityEngine.UI;
 
 public class GameStartStateView : MonoBehaviour
 {
-    [SerializeField] private GameObject _popup;
 
     public void Initialize()
     {
@@ -11,10 +10,10 @@ public class GameStartStateView : MonoBehaviour
     }
     public void Show()
     {
-        _popup.SetActive(true);
+        this.gameObject.SetActive(true);
     }
     public void Hide()
     {
-        _popup.SetActive(false);
+        this.gameObject.SetActive(false);
     }
 }

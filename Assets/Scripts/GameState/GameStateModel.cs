@@ -26,7 +26,7 @@ public class GameStateModel
         GameOver
     }
 
-    private ReactiveProperty<GameStateEnum> _gameState = new ReactiveProperty<GameStateEnum>(GameStateEnum.Playing);
+    private ReactiveProperty<GameStateEnum> _gameState = new ReactiveProperty<GameStateEnum>(GameStateEnum.Start);
 
     public IReadOnlyReactiveProperty<GameStateEnum> GameState => _gameState;
 
