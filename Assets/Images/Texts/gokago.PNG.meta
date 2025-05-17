@@ -79,7 +79,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -400,7 +400,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -409,7 +409,19 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      gokago_0: -5027949809103223336
+      gokago_1: -1638826931868571899
+      gokago_10: -2950120868757724421
+      gokago_11: -6888384549679222445
+      gokago_2: 6387635144758113346
+      gokago_3: -676274248540106544
+      gokago_4: 5241261053371980165
+      gokago_5: 7263069413670119140
+      gokago_6: 5520581609150020646
+      gokago_7: 4041088340074899340
+      gokago_8: -1916657525029261551
+      gokago_9: -3618215623378032777
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
