@@ -4,15 +4,13 @@ using UniRx;
 public class BallPresenter : MonoBehaviour
 {
     private BallModel _model;
-    private GameStateModel _gameStateModel;
     private BallView _view;
     [SerializeField] private float _initialX;
     [SerializeField] private float _initialY;
-    private bool _canMove = true;
 
     void Awake()
     {
-        _gameStateModel = GameStateModel.Instance;
+
     }
 
     void Start()
@@ -46,26 +44,12 @@ public class BallPresenter : MonoBehaviour
     /// </summary>
     private void Bind()
     {
-        _gameStateModel.GameState.Subscribe(state =>
-        {
-            if(state == GameStateModel.GameStateEnum.Playing)
-            {
-                _canMove = true;
-            }
-            else
-            {
-                _canMove = false;
-            }
-        }).AddTo(this);
-
         _model.BallPosX.Subscribe(x =>
         {
-            if (!_canMove) return;
             _view.MoveX(x);
         }).AddTo(this);
         _model.BallPosY.Subscribe(y =>
         {
-            if (!_canMove) return;
             _view.MoveY(y);
         }).AddTo(this);
     }

@@ -25,6 +25,10 @@ public class BallCreator : PoolManager<BallPool>
     /// </summary>
     private void Create()
     {
+        if(GameStateModel.Instance.GameState.Value != GameStateModel.GameStateEnum.Playing)
+        {
+            return;
+        }
         var ballObj = _objectPool.Get();
         var spriteRenderer = ballObj.transform.GetChild(1).GetComponent<SpriteRenderer>();
         SelectRandomSprite(spriteRenderer);
