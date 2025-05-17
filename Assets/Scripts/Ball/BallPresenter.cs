@@ -8,11 +8,17 @@ public class BallPresenter : MonoBehaviour
     [SerializeField] private float _initialX;
     [SerializeField] private float _initialY;
 
+    void Start()
+    {
+        Initialize(_ballModel, _ballView);
+    }
+
     public void Initialize(BallModel ballModel, BallView ballView)
     {
         InitializeSetPosition();
         _ballModel = new BallModel(_initialX, _initialY);
         _ballView = this.gameObject.GetComponent<BallView>();
+        Debug.Log("BallView:" + _ballView);
         _ballView.Initialize();
         Bind();
     }
