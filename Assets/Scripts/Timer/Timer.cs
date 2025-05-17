@@ -17,7 +17,7 @@ public class Timer : MonoBehaviour
         if (GameStateModel.Instance.GameState.Value == GameStateModel.GameStateEnum.Playing)
         {
             _time += Time.deltaTime;
-            _timerText.text = "Time: " + _time.ToString();
+            _timerText.text = "Time: " + _time.ToString("F2");
         }
         // タイマーが時間制限を超えたらゲームオーバーにする
         if (_time >= _timeLimit)

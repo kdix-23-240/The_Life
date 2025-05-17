@@ -1184,7 +1184,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 459366631691334883, guid: 7841d1ee77ef54c41a1d264005117d45, type: 3}
       propertyPath: _ballSprites.Array.size
-      value: 10
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 459366631691334883, guid: 7841d1ee77ef54c41a1d264005117d45, type: 3}
       propertyPath: '_ballSprites.Array.data[0]'
@@ -1226,6 +1226,18 @@ PrefabInstance:
       propertyPath: '_ballSprites.Array.data[9]'
       value: 
       objectReference: {fileID: -8218355577952547987, guid: 5a9af158e686b4c9394f520a34f07ee8, type: 3}
+    - target: {fileID: 459366631691334883, guid: 7841d1ee77ef54c41a1d264005117d45, type: 3}
+      propertyPath: '_ballSprites.Array.data[10]'
+      value: 
+      objectReference: {fileID: -3339656159837604450, guid: 6c151e9c410b1463fa125016a7b483fc, type: 3}
+    - target: {fileID: 459366631691334883, guid: 7841d1ee77ef54c41a1d264005117d45, type: 3}
+      propertyPath: '_ballSprites.Array.data[11]'
+      value: 
+      objectReference: {fileID: 4097929864096304364, guid: 04d85f9a145134cfb891adb8f1764d61, type: 3}
+    - target: {fileID: 459366631691334883, guid: 7841d1ee77ef54c41a1d264005117d45, type: 3}
+      propertyPath: '_ballSprites.Array.data[12]'
+      value: 
+      objectReference: {fileID: 1185743262347320140, guid: a9b9f5bc9300c46079dd2d6332cfe705, type: 3}
     - target: {fileID: 5584864350643909656, guid: 7841d1ee77ef54c41a1d264005117d45, type: 3}
       propertyPath: m_Name
       value: BallCreator
