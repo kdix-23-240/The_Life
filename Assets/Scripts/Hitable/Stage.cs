@@ -4,7 +4,7 @@ public class Stage : IHitable
 {
     private GameObject _gameObject;
     private Rigidbody2D _rigidbody;
-    private float _reflectRate = 1.0f; // 反射率（プラス）
+    private float _reflectRate = 0.8f; // 反射率（プラス）
 
     public Stage(GameObject gameObject)
     {

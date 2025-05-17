@@ -4,7 +4,7 @@ public class FrameHorizon : IHitable
 {
     private GameObject _gameObject;
     private Rigidbody2D _rigidbody;
-    private float _reflectRate = 0.5f; // 反射率（マイナス）
+    private float _reflectRate = 0.3f; // 反射率（マイナス）
 
     public FrameHorizon(GameObject gameObject)
     {
