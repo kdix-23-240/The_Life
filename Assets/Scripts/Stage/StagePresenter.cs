@@ -20,7 +20,7 @@ public class StagePresenter : MonoBehaviour
     }
     void Update()
     {
-        _controller.Control(gameObject);
+        _controller.Control();
     }
     private void Bind()
     {
