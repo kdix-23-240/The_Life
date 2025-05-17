@@ -716,6 +716,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7688514947918382056, guid: ff95e35ba22f04e07be6492a428662d5, type: 3}
   m_PrefabInstance: {fileID: 6532320093909533782}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1031728250 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5584864350643909656, guid: 7841d1ee77ef54c41a1d264005117d45, type: 3}
+  m_PrefabInstance: {fileID: 1240501840535997359}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1231937872
 GameObject:
   m_ObjectHideFlags: 0
@@ -747,6 +752,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _startView: {fileID: 515710333}
   _resultView: {fileID: 530312315}
+  _creator: {fileID: 1031728250}
 --- !u!4 &1231937874
 Transform:
   m_ObjectHideFlags: 0
@@ -840,7 +846,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _timerText: {fileID: 1441921060}
-  _timeLimit: 5
+  _timeLimit: 30
 --- !u!1 &1556521372
 GameObject:
   m_ObjectHideFlags: 0
@@ -1158,7 +1164,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 459366631691334883, guid: 7841d1ee77ef54c41a1d264005117d45, type: 3}
       propertyPath: _maxSize
-      value: 7
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 459366631691334883, guid: 7841d1ee77ef54c41a1d264005117d45, type: 3}
       propertyPath: m_Enabled
@@ -1170,11 +1176,11 @@ PrefabInstance:
       objectReference: {fileID: 4414700927481265615, guid: 598cba4e045f04b7f8b6161e8fa034a6, type: 3}
     - target: {fileID: 459366631691334883, guid: 7841d1ee77ef54c41a1d264005117d45, type: 3}
       propertyPath: _createDelayTime
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 459366631691334883, guid: 7841d1ee77ef54c41a1d264005117d45, type: 3}
       propertyPath: _defaultCapacity
-      value: 4
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 459366631691334883, guid: 7841d1ee77ef54c41a1d264005117d45, type: 3}
       propertyPath: _ballSprites.Array.size
@@ -1614,6 +1620,14 @@ PrefabInstance:
     - target: {fileID: 790650463781663907, guid: ce9d24663506747d1a04dc8a278df30f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635804194482662321, guid: ce9d24663506747d1a04dc8a278df30f, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702328944616534164, guid: ce9d24663506747d1a04dc8a278df30f, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 4920171704853568839, guid: ce9d24663506747d1a04dc8a278df30f, type: 3}
       propertyPath: m_Name

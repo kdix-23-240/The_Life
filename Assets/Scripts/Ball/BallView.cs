@@ -20,8 +20,7 @@ public class BallView : MonoBehaviour
         this.transform.position = newPosition;
     }
     /// <summary>
-    /// 雑に書きすぎているので、後で修正する
-    /// コリジョンインターフェース的なものを作って別のクラスに処理を書く
+    /// ボールが他のオブジェクトと衝突したときに呼び出される
     /// </summary>
     /// <param name="other"></param>
     void OnTriggerEnter2D(Collider2D other)

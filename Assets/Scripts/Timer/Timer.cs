@@ -13,15 +13,15 @@ public class Timer : MonoBehaviour
     }
     void Update()
     {
+        // ゲームの状態がPlayingの時だけタイマーを動かす
         if (GameStateModel.Instance.GameState.Value == GameStateModel.GameStateEnum.Playing)
         {
             _time += Time.deltaTime;
-            _timerText.text = "Time: " + _time.ToString("F2");
+            _timerText.text = "Time: " + _time.ToString();
         }
-
+        // タイマーが時間制限を超えたらゲームオーバーにする
         if (_time >= _timeLimit)
         {
-            Debug.Log("Time's up!");
             _time = 0f;
             GameStateModel.Instance.SetGameState(GameStateModel.GameStateEnum.GameOver);
         }

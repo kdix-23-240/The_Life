@@ -1,5 +1,9 @@
 using UniRx;
 
+/// <summary>
+/// キーボード入力による操作を行うクラス
+/// AボタンとDボタンが押されているかどうかを管理する
+/// </summary>
 public class KeyControllerModel
 {
     private readonly ReactiveProperty<bool> _aButtonPressed;

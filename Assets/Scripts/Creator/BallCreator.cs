@@ -37,7 +37,10 @@ public class BallCreator : PoolManager<BallPool>
         ballObj.Initialize();
         BallCount++;
     }
-
+    /// <summary>
+    /// インスペクターでアタッチしたスプライトリストからランダムにスプライトを選択する
+    /// </summary>
+    /// <param name="spriteRenderer"></param>
     private void SelectRandomSprite(SpriteRenderer spriteRenderer)
     {
         int randomIndex = Random.Range(0, _ballSprites.Length);

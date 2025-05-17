@@ -6,6 +6,7 @@ public class GameStatePresenter : MonoBehaviour
     private GameStateModel _model;
     [SerializeField] private GameStartStateView _startView;
     [SerializeField] private GameResultView _resultView;
+    [SerializeField] private GameObject _creator;
     private float _timer;
 
     void Awake()
@@ -18,11 +19,13 @@ public class GameStatePresenter : MonoBehaviour
         _resultView.Initialize();
         Bind();
     }
+    /// <summary>
+    /// ゲームの状態が変化したらポップアップを更新する
+    /// </summary>
     private void Bind()
     {
         _model.GameState.Subscribe(state =>
         {
-            Debug.Log("GameState: " + _model.GetGameState());
             switch (state)
             {
                 case GameStateModel.GameStateEnum.Start:
@@ -35,6 +38,10 @@ public class GameStatePresenter : MonoBehaviour
                     break;
                 case GameStateModel.GameStateEnum.GameOver:
                     _startView.Hide();
+                    for (int i = _creator.transform.childCount - 1; i >= 0; i--)
+                    {
+                        Destroy(_creator.transform.GetChild(i).gameObject);
+                    }
                     _resultView.Finish(BallCreator.BallCount - GameOver.DiedNum, GameOver.DiedNum);
                     break;
             }

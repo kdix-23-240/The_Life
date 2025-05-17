@@ -4,10 +4,10 @@ using UniRx;
 /// <summary>
 /// キーボード入力による操作を行うクラス
 /// </summary>
-public class KeyController : MonoBehaviour, IController
+public class KeyControllerPresenter : MonoBehaviour, IController
 {
     private KeyControllerModel _keyControllerModel;
-    [SerializeField] private StageModel _stageModel;
+    private StageModel _stageModel;
 
     void Awake()
     {
