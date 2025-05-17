@@ -21,8 +21,8 @@ public class GameStateModel
 
     public enum GameStateEnum
     {
+        Start,
         Playing,
-        Paused,
         GameOver
     }
 

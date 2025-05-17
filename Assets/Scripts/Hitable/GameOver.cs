@@ -4,6 +4,7 @@ public class GameOver : IHitable
 {
     private GameObject _gameObject;
     private Rigidbody2D _rigidbody;
+    private static int _gameOverCount = 0;
 
     public GameOver(GameObject gameObject)
     {
@@ -12,7 +13,7 @@ public class GameOver : IHitable
     }
     public void Hit(Collider2D other)
     {
-        // GameStateModel.Instance.ChangeGameState(GameStateModel.GameStateEnum.GameOver);
         Debug.Log("GameOver");
+        _gameOverCount++;
     }
 }
