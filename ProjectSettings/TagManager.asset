@@ -7,6 +7,9 @@ TagManager:
   - GameOver
   - Stage
   - Frame
+  - Ball
+  - FrameHorizon
+  - FrameVertical
   layers:
   - Default
   - TransparentFX

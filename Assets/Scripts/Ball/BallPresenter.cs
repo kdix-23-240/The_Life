@@ -37,7 +37,7 @@ public class BallPresenter : MonoBehaviour
     {
         // ランダムな初期位置を設定
         System.Random random = new System.Random();
-        if (random.Next(0, 1) == 0)
+        if (random.Next(0, 2) == 0)
         {
             _initialX = -_initialX;
         }
