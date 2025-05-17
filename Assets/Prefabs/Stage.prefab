@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6868525454240479055}
   m_Layer: 0
   m_Name: Stage
-  m_TagString: CenterStage
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49,6 +49,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a96c99abaf3c245ca9eb430c495cdf52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _moveSpeed: 1
+  _maxPosX: 4.3
 --- !u!114 &2414293503394708950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73,7 +75,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82645b2b7df33482781e41d4cb46aac7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 5
 --- !u!1 &570702155644583976
 GameObject:
   m_ObjectHideFlags: 0
@@ -87,7 +88,7 @@ GameObject:
   - component: {fileID: 1490559245870442475}
   m_Layer: 0
   m_Name: Square (1)
-  m_TagString: Stage
+  m_TagString: CenterStage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -221,7 +222,7 @@ GameObject:
   - component: {fileID: 1980243690741864004}
   m_Layer: 0
   m_Name: Square
-  m_TagString: Stage
+  m_TagString: CenterStage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
