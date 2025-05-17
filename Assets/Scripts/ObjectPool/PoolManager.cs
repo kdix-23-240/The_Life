@@ -26,7 +26,6 @@ public abstract class PoolManager<T> : MonoBehaviour where T : MonoBehaviour, IP
 
     protected virtual void OnReleaseToPool(T pooledObject)
     {
-        Debug.Log($"OnReleaseToPool called for: {pooledObject.gameObject.name}");
         pooledObject.gameObject.SetActive(false);
     }
 

@@ -61,7 +61,7 @@ public class BallPresenter : MonoBehaviour
         {
             _initialX = -_initialX;
         }
-        // 0~3の乱数を生成
-        _initialY += random.Next(0, 4);
+        // -1~5の乱数を生成
+        _initialY = Random.Range(-1f, 5f);
     }
 }
