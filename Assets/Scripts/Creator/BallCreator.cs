@@ -6,7 +6,8 @@ using Cysharp.Threading.Tasks;
 /// </summary>
 public class BallCreator : PoolManager<BallPool>
 {
-    // [SerializeField] private GameObject[] _balls;
+    [SerializeField] private Sprite[] _ballSprites;
+    private SpriteRenderer _spriteRenderer;
     [SerializeField] private float _createDelayTime = 5f;// 生成間隔(秒)
 
     async UniTask Start()
@@ -25,7 +26,15 @@ public class BallCreator : PoolManager<BallPool>
     private void Create()
     {
         var ballObj = _objectPool.Get();
+        var spriteRenderer = ballObj.transform.GetChild(1).GetComponent<SpriteRenderer>();
+        SelectRandomSprite(spriteRenderer);
         ballObj.GetComponent<BallPresenter>().Initialize();
         ballObj.Initialize();
+    }
+
+    private void SelectRandomSprite(SpriteRenderer spriteRenderer)
+    {
+        int randomIndex = Random.Range(0, _ballSprites.Length);
+        spriteRenderer.sprite = _ballSprites[randomIndex];
     }
 }

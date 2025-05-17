@@ -617,6 +617,18 @@ PrefabInstance:
       propertyPath: _defaultCapacity
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 459366631691334883, guid: 7841d1ee77ef54c41a1d264005117d45, type: 3}
+      propertyPath: _ballSprites.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 459366631691334883, guid: 7841d1ee77ef54c41a1d264005117d45, type: 3}
+      propertyPath: '_ballSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: -4215878359209421728, guid: acf39b944dc344c8f8b9f99a922aa46c, type: 3}
+    - target: {fileID: 459366631691334883, guid: 7841d1ee77ef54c41a1d264005117d45, type: 3}
+      propertyPath: '_ballSprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: -2999920868885869842, guid: ee3d5ac9f8d9e442eb595cb5a154a5da, type: 3}
     - target: {fileID: 5584864350643909656, guid: 7841d1ee77ef54c41a1d264005117d45, type: 3}
       propertyPath: m_Name
       value: BallCreator
