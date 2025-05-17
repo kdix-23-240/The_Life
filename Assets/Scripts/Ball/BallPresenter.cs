@@ -26,6 +26,14 @@ public class BallPresenter : MonoBehaviour
         _view.Initialize();
         Bind();
     }
+    public void Initialize()
+    {
+        InitializeSetPosition();
+        _model = new BallModel(_initialX, _initialY);
+        _view = this.gameObject.GetComponent<BallView>();
+        _view.Initialize();
+        Bind();
+    }
     /// <summary>
     /// ボールの位置が変化したときにビューを更新する
     /// </summary>

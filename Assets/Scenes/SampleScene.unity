@@ -523,7 +523,7 @@ PrefabInstance:
       objectReference: {fileID: 4414700927481265615, guid: 598cba4e045f04b7f8b6161e8fa034a6, type: 3}
     - target: {fileID: 459366631691334883, guid: 7841d1ee77ef54c41a1d264005117d45, type: 3}
       propertyPath: _createDelayTime
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 459366631691334883, guid: 7841d1ee77ef54c41a1d264005117d45, type: 3}
       propertyPath: _defaultCapacity
