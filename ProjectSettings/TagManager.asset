@@ -10,6 +10,7 @@ TagManager:
   - Ball
   - FrameHorizon
   - FrameVertical
+  - CenterStage
   layers:
   - Default
   - TransparentFX

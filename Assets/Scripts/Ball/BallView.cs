@@ -9,10 +9,6 @@ public class BallView : MonoBehaviour
     {
         Debug.Log("Initializing BallView...");
         _rigidbody = GetComponent<Rigidbody2D>();
-        if (_rigidbody == null)
-        {
-            Debug.LogError("Rigidbody2Dがアタッチされていません: " + gameObject.name);
-        }
     }
     public void MoveX(float x)
     {
@@ -29,6 +25,15 @@ public class BallView : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("tag:" + other.tag);
+        if (other.CompareTag("CenterStage"))
+        {
+            // FrameVerticalの角度とBallの角度から反射ベクトルを計算
+            Vector2 normal = -other.transform.up; // FrameVerticalの法線ベクトル
+            Vector2 incoming = _rigidbody.linearVelocity; // Ballの入射ベクトル（修正: linearVelocity → velocity）
+            Vector2 reflection = Vector2.Reflect(incoming * _reflectPlusRate, normal); // 反射ベクトル
+            _rigidbody.linearVelocity = reflection; // Ballの速度を反射ベクトルに設定
+        }
+        
 
         if (other.CompareTag("Stage"))
         {

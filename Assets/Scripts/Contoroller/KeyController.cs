@@ -3,9 +3,10 @@ using UnityEngine;
 public class KeyController : MonoBehaviour, IController
 {
     [SerializeField] private float _speed = 1f;
+    private float _maxX = 4.3f;
     public void Control()
     {
-        if (-5 < this.gameObject.transform.position.x)
+        if (- _maxX< this.gameObject.transform.position.x)
         {
             if (Input.GetKey(KeyCode.A))
             {
@@ -13,7 +14,7 @@ public class KeyController : MonoBehaviour, IController
             }
         }
 
-        if (this.gameObject.transform.position.x < 5)
+        if (this.gameObject.transform.position.x < _maxX)
         {
             if (Input.GetKey(KeyCode.D))
             {
