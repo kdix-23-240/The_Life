@@ -199,7 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77b4414b334fe4782ad04450e06fb964, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _initialX: 13
+  _initialX: 10
   _initialY: 4
 --- !u!114 &-2102416224849148220
 MonoBehaviour:
