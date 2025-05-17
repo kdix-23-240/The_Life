@@ -27,11 +27,14 @@ public class BallView : MonoBehaviour
         Debug.Log("tag:" + other.tag);
         if (other.CompareTag("CenterStage"))
         {
-            // FrameVerticalの角度とBallの角度から反射ベクトルを計算
-            Vector2 normal = -other.transform.up; // FrameVerticalの法線ベクトル
-            Vector2 incoming = _rigidbody.linearVelocity; // Ballの入射ベクトル（修正: linearVelocity → velocity）
-            Vector2 reflection = Vector2.Reflect(incoming * _reflectPlusRate, normal); // 反射ベクトル
-            _rigidbody.linearVelocity = reflection; // Ballの速度を反射ベクトルに設定
+            // y軸方向の速度を0にする
+            Vector2 velocity = _rigidbody.linearVelocity;
+            velocity.y = 0;
+            _rigidbody.linearVelocity = velocity;
+
+            // y軸方向に力を加える
+            Vector2 force = new Vector2(0, 50f); // 上方向の力
+            _rigidbody.AddForce(force, ForceMode2D.Impulse);
         }
         
 
