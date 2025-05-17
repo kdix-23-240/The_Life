@@ -8,14 +8,18 @@ public class BallView : MonoBehaviour
 
         _rigidbody = GetComponent<Rigidbody2D>();
     }
-
-    public void Move(float x)
+    public void MoveX(float x)
     {
         Vector3 newPosition = this.transform.position;
         newPosition.x = x;
         this.transform.position = newPosition;
     }
-    
+    public void MoveY(float y)
+    {
+        Vector3 newPosition = this.transform.position;
+        newPosition.y = y;
+        this.transform.position = newPosition;
+    }
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Stage"))
