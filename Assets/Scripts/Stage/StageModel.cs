@@ -3,7 +3,7 @@ using UniRx;
 public class StageModel
 {
     private readonly ReactiveProperty<float> _stagePosX;
-    private ReactiveProperty<float> StagePosX;
+    public ReactiveProperty<float> StagePosX;
     // StagePosXのValueを取得するプロパティ
     public float StagePosXValue
     {

@@ -4,7 +4,7 @@ public class StageView : MonoBehaviour
 {
     public void Initialize()
     {
-
+        
     }
     public void Move(float x)
     {
