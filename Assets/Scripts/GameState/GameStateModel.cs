@@ -36,4 +36,8 @@ public class GameStateModel
     }
     // コンストラクタをprivateにして外部からの生成を禁止
     private GameStateModel() { }
+    public void SetGameState(GameStateEnum state)
+    {
+        _gameState.Value = state;
+    }
 }

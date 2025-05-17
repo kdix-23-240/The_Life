@@ -9,6 +9,7 @@ public class BallCreator : PoolManager<BallPool>
     [SerializeField] private Sprite[] _ballSprites;
     private SpriteRenderer _spriteRenderer;
     [SerializeField] private float _createDelayTime = 5f;// 生成間隔(秒)
+    public static int BallCount = 0;
 
     async UniTask Start()
     {
@@ -25,7 +26,7 @@ public class BallCreator : PoolManager<BallPool>
     /// </summary>
     private void Create()
     {
-        if(GameStateModel.Instance.GameState.Value != GameStateModel.GameStateEnum.Playing)
+        if (GameStateModel.Instance.GameState.Value != GameStateModel.GameStateEnum.Playing)
         {
             return;
         }
@@ -34,6 +35,7 @@ public class BallCreator : PoolManager<BallPool>
         SelectRandomSprite(spriteRenderer);
         ballObj.GetComponent<BallPresenter>().Initialize();
         ballObj.Initialize();
+        BallCount++;
     }
 
     private void SelectRandomSprite(SpriteRenderer spriteRenderer)
