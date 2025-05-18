@@ -29,7 +29,7 @@ public class KeyControllerPresenter : MonoBehaviour, IController
     {
         // 左右の移動
         // 左端にいなければ、移動できる
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             _keyControllerModel.AButtonPressed.Value = true;
         }
@@ -40,7 +40,7 @@ public class KeyControllerPresenter : MonoBehaviour, IController
 
         // 右に移動
         // 右端にいなければ、移動できる
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             _keyControllerModel.DButtonPressed.Value = true;
         }
