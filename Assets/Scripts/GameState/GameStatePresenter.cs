@@ -29,6 +29,7 @@ public class GameStatePresenter : MonoBehaviour
             switch (state)
             {
                 case GameStateModel.GameStateEnum.Start:
+                    Reset();
                     _startView.Show();
                     _resultView.Hide();
                     break;
@@ -46,5 +47,11 @@ public class GameStatePresenter : MonoBehaviour
                     break;
             }
         }).AddTo(this);
+    }
+
+    private void Reset()
+    {
+        BallCreator.BallCount = 0;
+        GameOver.DiedNum = 0;
     }
 }

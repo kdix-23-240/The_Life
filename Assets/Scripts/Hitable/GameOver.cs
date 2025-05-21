@@ -13,7 +13,6 @@ public class GameOver : IHitable
     }
     public void Hit(Collider2D other)
     {
-        Debug.Log("GameOver");
         DiedNum++;
     }
 }

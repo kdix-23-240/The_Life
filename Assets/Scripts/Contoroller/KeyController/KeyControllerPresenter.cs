@@ -4,7 +4,7 @@ using UniRx;
 /// <summary>
 /// キーボード入力による操作を行うクラス
 /// </summary>
-public class KeyControllerPresenter : MonoBehaviour, IController
+public class KeyControllerPresenter : MonoBehaviour
 {
     private KeyControllerModel _keyControllerModel;
     private StageModel _stageModel;
@@ -20,34 +20,7 @@ public class KeyControllerPresenter : MonoBehaviour, IController
     }
     void Update()
     {
-        Control();
-    }
-    /// <summary>
-    /// キーボード入力による操作を行う
-    /// </summary>
-    public void Control()
-    {
-        // 左右の移動
-        // 左端にいなければ、移動できる
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-        {
-            _keyControllerModel.AButtonPressed.Value = true;
-        }
-        else
-        {
-            _keyControllerModel.AButtonPressed.Value = false;
-        }
 
-        // 右に移動
-        // 右端にいなければ、移動できる
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-        {
-            _keyControllerModel.DButtonPressed.Value = true;
-        }
-        else
-        {
-            _keyControllerModel.DButtonPressed.Value = false;
-        }
     }
     public void Bind()
     {
@@ -68,5 +41,10 @@ public class KeyControllerPresenter : MonoBehaviour, IController
                 _stageModel.MoveRight();
             }
         }).AddTo(this);
+    }
+
+    public KeyControllerModel GetKeyControllerModel()
+    {
+        return _keyControllerModel;
     }
 }

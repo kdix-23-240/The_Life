@@ -17,3 +17,56 @@ public class KeyControllerModel
         _dButtonPressed = new ReactiveProperty<bool>(false);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///
+/// 1. ボタンがトリガー
+///     ボタンを押す → それをトリガーに処理を行う
+/// 
+/// 
+/// 
+/// 
+/// 
+/// 2. static変数を経由
+///     ボタンを押す　→ static bool値をtrueにする → それをトリガーに処理を行う
+/// 
+/// 
+/// 
+/// 
+/// 
+///
+/// 3. Observerパターン
+///     ボタンを押す(Presenter)　→ ModelのReactivePropertyの値をtrueにする 
+///    → それをPresenterで監視する　→ どのクラスのどんな処理でも呼び出すことができる
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -5,7 +5,6 @@ public class StagePresenter : MonoBehaviour
 {
     private StageModel _model;
     private StageView _view;
-    private IController _controller;
     [SerializeField] private float _moveSpeed = 1.0f;
     [SerializeField] private float _maxPosX = 4.3f;
 
@@ -13,7 +12,6 @@ public class StagePresenter : MonoBehaviour
     {
         _model = new StageModel(_moveSpeed, _maxPosX);
         _view = GetComponent<StageView>();
-        _controller = GetComponent<IController>();
     }
     void Start()
     {
@@ -22,7 +20,7 @@ public class StagePresenter : MonoBehaviour
     }
     void Update()
     {
-        _controller.Control();
+
     }
     private void Move(float x)
     {

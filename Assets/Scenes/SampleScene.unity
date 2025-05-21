@@ -768,6 +768,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1244809378 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 354382154123268902, guid: ff95e35ba22f04e07be6492a428662d5, type: 3}
+  m_PrefabInstance: {fileID: 6532320093909533782}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1244809382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1244809378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e56639c83ad1476e8eeb37d16ca240a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1303876775 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6515732190669472713, guid: 91971e587d0484c65b17c081371e7e23, type: 3}
@@ -1887,7 +1904,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7688514947918382056, guid: ff95e35ba22f04e07be6492a428662d5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 556037072}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 354382154123268902, guid: ff95e35ba22f04e07be6492a428662d5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1244809382}
   m_SourcePrefab: {fileID: 100100000, guid: ff95e35ba22f04e07be6492a428662d5, type: 3}
 --- !u!1001 &7146638712660996240
 PrefabInstance:
